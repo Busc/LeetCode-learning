@@ -53,6 +53,7 @@ if __name__ == "__main__":
     node3 = TreeNode(20)
     node4 = TreeNode(15)
     node5 = TreeNode(7)
+    # build connection
     node1.left = node2
     node1.right = node3
     node3.left = node4
