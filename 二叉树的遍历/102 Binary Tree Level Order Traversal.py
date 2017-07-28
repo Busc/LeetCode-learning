@@ -45,6 +45,8 @@ class Solution(object):
                     next_level.append(node.right)
             curr_level = next_level
             travResult.append(level_val)
+        # 107 bottom-up level
+        # travResult.reverse()
         return travResult
 
 if __name__ == "__main__":
