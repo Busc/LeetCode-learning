@@ -28,7 +28,7 @@ class Solution(object):
         :return: List[int]
         """
         if not root:
-            return
+            return []
         travResult = []
         stack = [(root, 'non')]
         while stack:
