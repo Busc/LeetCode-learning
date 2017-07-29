@@ -20,10 +20,13 @@ class Solution(object):
         """
         #  m x n grid
         dp = [[1 for __ in range(n)] for __ in range(m)]
-        for i in range(1, n):
-            for j in range(1, m):
-                dp[j][i] = dp[j-1][i]+dp[j][i-1]
-        return dp[m-1][n-1]
+        # for i in range(1, n):
+        #     for j in range(1, m):
+        #         dp[j][i] = dp[j-1][i]+dp[j][i-1]
+        for i in range(1, m):
+            for j in range(1, n):
+                dp[i][j] = dp[i-1][j]+dp[i][j-1]
+        return dp[m - 1][n - 1]
 
 if __name__ == "__main__":
     # assert Solution().uniquePaths(3, 7) == 28
