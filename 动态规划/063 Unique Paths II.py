@@ -32,6 +32,7 @@ class Solution(object):
         cols = len(obstacleGrid[0])
         # rows x cols grid
         dp = [[0 for __ in range(cols)] for __ in range(rows)]
+
         dp[0][0] = 1
         for i in range(1, rows):
             dp[i][0] = dp[i-1][0] if obstacleGrid[i][0] == 0 else 0
