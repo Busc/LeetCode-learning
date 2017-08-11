@@ -31,13 +31,13 @@ class Solution(object):
         travResult = []
         stack = []
         while root or stack:
-            # save the nodes which have left child
+            # trace back to the 'bottom' layer
             while root:
                 stack.append(root)
                 root = root.left
+            # stack: father + leftchild
             if stack:
                 root = stack.pop()
-                # middle node
                 travResult.append(root.val)
                 # visit the right subtree
                 root = root.right
