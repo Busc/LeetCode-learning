@@ -47,5 +47,5 @@ if __name__ == "__main__":
     # build connection
     node1.right = node2
     node2.left = node3
-    # assert Solution().inorderTraversal(node1) == [1, 3, 2]
+    # assert Solution().preorderTraversal(node1) == [1, 2, 3]
     print(Solution().preorderTraversal(node1))
