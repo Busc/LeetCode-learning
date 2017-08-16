@@ -36,11 +36,10 @@ class Solution(object):
                 stack.append(root)
                 root = root.left
             # stack: father + leftchild
-            if stack:
-                root = stack.pop()
-                travResult.append(root.val)
-                # visit the right subtree
-                root = root.right
+            root = stack.pop()
+            travResult.append(root.val)
+            # visit the right subtree
+            root = root.right
         return travResult
 
 if __name__ == "__main__":
