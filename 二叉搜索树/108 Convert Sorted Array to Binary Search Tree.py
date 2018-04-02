@@ -22,7 +22,7 @@ class Solution(object):
     def _sortedArrayToBST(self, nums, start, end):
         if start == end:
             return None
-        mid = (start + end)/2
+        mid = (start + end) // 2
         root = TreeNode(nums[mid])
         root.left = self._sortedArrayToBST(nums, start, mid)
         root.right = self._sortedArrayToBST(nums, mid+1, end)
