@@ -35,13 +35,12 @@ class Solution(object):
             while root:
                 stack.append(root)
                 root = root.left
-            if stack:
-                root = stack.pop()
-                # inorder of BST is ascending
-                if prev and root.val <= prev.val:
-                    return False
-                prev = root
-                root = root.right
+            root = stack.pop()
+            # inorder of BST is ascending
+            if prev and root.val <= prev.val:
+                return False
+            prev = root
+            root = root.right
         return True
 
 
